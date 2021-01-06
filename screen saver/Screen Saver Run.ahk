@@ -5,6 +5,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #SingleInstance Ignore ;중복 실행 무시
 
-Run, "C:\Google Drive\AutoHotkey\screen saver\ScrSvr_Project1.scr.lnk"
+Run, "ScrSvr_Project1.scr.lnk"
 
 ExitApp

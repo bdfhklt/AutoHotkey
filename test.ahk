@@ -3,6 +3,12 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-Run, C:\Windows\System32\black screen saver.scr
+; #Persistent
+; Return
+#MaxThreadsPerHotkey, 5
 
-ExitApp
+Numpad1::
+OutputDebug, s
+Sleep, 2000
+OutputDebug, e
+Return
