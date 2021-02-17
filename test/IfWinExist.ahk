@@ -3,9 +3,15 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-DetectHiddenWindows, On
+; DetectHiddenWindows, On
+
+OutputDebug, find
 ; SetTitleMatchMode, RegEx
-IfWinExist, μTorrent
+; IfWinExist, μTorrent
+; {
+; 	OutputDebug, ok
+; }
+IfWinExist, ahk_exe sidebar.exe
 {
-	MsgBox, ok
+	OutputDebug, ok
 }
