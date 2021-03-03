@@ -14,14 +14,16 @@ WM_QUERYENDSESSION(wParam, lParam)
 {
 	Gui, Show ; 종료 방지 1
 	DetectHiddenWindows, On
-
+	
 	; utorrent(μTorrent)
 	win1 := "μTorrent"
+	process1 := "uTorrent.exe"
 	IfWinExist, %win1%
 	{
 		WinClose, %win1%
 		ControlSend, , {Enter}, %win1%
-		WinWaitClose, %win1%
+		; WinWaitClose, %win1%
+		Process, WaitClose, %process1%
 		Sleep, 2000
 	}
 	
