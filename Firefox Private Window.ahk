@@ -3,5 +3,6 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-Run, "C:\Program Files\Mozilla Firefox\firefox.exe" -private-window
+; Run, "C:\Program Files\Mozilla Firefox\firefox.exe" -private-window
+Run, "C:\Program Files\Firefox Developer Edition\firefox.exe" -private-window
 ExitApp
