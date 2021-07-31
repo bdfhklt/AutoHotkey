@@ -4,10 +4,12 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; 기본 재생 장치 스위치
-SoundVolumeViewExe := "C:\Portable\SoundVolumeView\soundvolumeview-x64\SoundVolumeView.exe"
+UnmuteSystemSoundsExe := A_ScriptDir . "\..\UnmuteSystemSounds\UnmuteSystemSounds.exe"
+SoundVolumeViewExe := A_ScriptDir . "\..\SoundVolumeView\soundvolumeview-x64\SoundVolumeView.exe"
 device1 := "speaker"
 device2 := "headphone"
 
+RunWait, %UnmuteSystemSoundsExe%
 RunWait, %SoundVolumeViewExe% /switchdefault %device1% %device2% all
 SoundPlay, *-1, wait
 return
