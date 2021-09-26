@@ -1,19 +1,19 @@
 ﻿Msgbox % GenerateRandomString(8)
 
-GenerateRandomString(length) {
-	
+GenerateRandomString(length)
+{
 	abc := "abcdefghijklmnopqurstuvwxyz"
 	num := "0123456789"
-	StringSplit, abc, abc
-	StringSplit, num, num
-	
+	abcArr := StrSplit(abc)
+	numArr := StrSplit(num)
+	OutputDebug, % abcArr
 	while(length)
 	{
-		Random, rand, 1, 26
-		password .= abc%rand%
+		Random, rand, 1, abcArr.Length()
+		password .= abcArr[rand]
 		length--
-		Random, rand, 1, 10
-		password .= num%rand%
+		Random, rand, 1, numArr.Length()
+		password .= numArr[rand]
 		length--
 	}
 	return password
