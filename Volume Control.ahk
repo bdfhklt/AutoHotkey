@@ -5,12 +5,17 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #SingleInstance force
 
+; 핫키를 특정 프로그램에서도 사용 가능하나 반대로 다른 특정 프로그램에서 사용 불가
+; #InstallKeybdHook
+; #UseHook, On
+
 Gui, -Caption +ToolWindow
 Gui, Color, c000000
 Gui, Font, s11 q5 cFFFFFF, 맑은 고딕
 Gui, add, Progress, x20 y20 w20 h100 Vertical c1F7F3F vProgress1, 100
 Gui, add, Text, x18 y125 Center vText1, 100
 Gui, Show, x100 y100 w60 h160 Hide
+; 문제점: 특정 전체화면 프로그램에서 알트탭처럼 바탕화면으로 강제 화면 전환 발생
 ShowGui()
 
 Return
