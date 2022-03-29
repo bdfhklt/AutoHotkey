@@ -14,12 +14,12 @@ WM_QUERYENDSESSION(wParam, lParam)
 	; MsgBox, test ; 성공, 단독으로 사용
 	; Return false ; 실패, 대소문자 구분없음
 	; Return true ; 실패
-	Gui, Show ; 종료 방지 1
+	Gui, Show, , % "winTitle" ; 종료 방지 1
 	Return
 }
 
 t1()
 {
-	Sleep, 10000
-	Return
+	Sleep, 20000
+	Return ; 종료
 }
