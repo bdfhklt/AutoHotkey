@@ -48,11 +48,11 @@ OnWM_QUERYENDSESSION(wParam, lParam)
 	{
 		processList.Push(process1)
 
-		Gui, Show, , % "Warning! press cancel button"
+		; Gui, Show, , % "Warning! press cancel button"
 	}
 
 	WaitAllClose() ; 모두 종료 대기
-	Sleep, 2000
+	; Sleep, 2000
 
 	Gui, Show, , % "ExitApp"
 }
@@ -72,6 +72,8 @@ WaitAllClose()
 {
 	Loop, % processList.Length()
 	{
+		Gui, Show, , % "wait close: " processList[A_Index]
+
 		; OutputDebug, % "wait close: " processList[A_Index]
 		Process, WaitClose, % processList[A_Index]
 	}
