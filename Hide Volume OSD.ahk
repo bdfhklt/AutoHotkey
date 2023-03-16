@@ -27,7 +27,8 @@ If (targetHwnd != 0)
 {
 	Send, {Volume_Mute} ; (음소거 기능) OSD 표시
 	Send, {Volume_Mute}
-	DllCall("user32.dll\ShowWindow","UInt", targetHwnd, "UInt", 6) ; 숨기기
-	; DllCall("user32.dll\ShowWindow","UInt", targetHwnd, "UInt", 9) ; 복원
+	; DllCall("user32.dll\ShowWindow","UInt", targetHwnd, "UInt", 0) ; 숨기기, 자체 타임아웃과 동일한 방식
+	DllCall("user32.dll\ShowWindow","UInt", targetHwnd, "UInt", 6) ; 최소화, 더이상 나타나지 않음
+	; DllCall("user32.dll\ShowWindow","UInt", targetHwnd, "UInt", 9) ; 복원, 숨겨진의 경우 숨기기 직전의 반투명한 창을 그대로 복원하는 부작용 발생
 }
 Return

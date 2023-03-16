@@ -64,7 +64,7 @@ WindowCheck(targetTitle, targetProcess, targetPath)
 	Process, Close, %targetProcess%
 	Process, WaitClose, %targetProcess%
 	Run, %targetPath%
-	WinWaitActive, %targetTitle%, , 5
+	WinWaitActive, %targetTitle%, , 30
 	If (ErrorLevel != 1)
 	{
 		GroupAdd, Group1, %targetTitle%

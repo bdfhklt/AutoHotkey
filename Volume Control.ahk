@@ -11,7 +11,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 Gui, -Caption +ToolWindow
 Gui, Color, c000000
-Gui, Font, s11 q5 cFFFFFF, 맑은 고딕
+Gui, Font, s11 q5 cFFFFFF, Segoe UI
 Gui, add, Progress, x20 y20 w20 h100 Vertical c1F7F3F vProgress1, 100
 Gui, add, Text, x18 y125 Center vText1, 100
 Gui, Show, x100 y100 w60 h160 Hide
